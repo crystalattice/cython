@@ -1,11 +1,10 @@
 # distutils: language=c++
 
-
 from libcpp.vector cimport vector
 
 def primes_cpp(unsigned int nb_primes):
     cdef int n, i
-    cdef vector[int] p
+    cdef vector[int] p  # C++ vector used like a Python list, but closer to a Python array type
     p.reserve(nb_primes)  # allocate memory for 'nb_primes' elements.
 
     n = 2
